@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 2160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#161d24" />
+      <stop offset="100%" stop-color="#12181e" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .terminal-bg { fill: #0f1419; stroke: #1c242b; stroke-width: 1.5; }
+    .title-bar { fill: url(#titleGrad); }
+    .tab-bg { fill: #0f1419; stroke: #1c242b; stroke-width: 1; }
+    .tab-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #7fe7e0; font-weight: 600; }
+    
+    .prompt-user { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #ff5fa2; font-weight: bold; }
+    .prompt-at { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #6e7681; }
+    .prompt-host { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #7fe7e0; font-weight: bold; }
+    .prompt-path { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #aef9f5; }
+    .prompt-sym { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #39c5bb; font-weight: bold; }
+    .prompt-cmd { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13.5px; fill: #ffffff; font-weight: 600; }
+    
+    .card-border { fill: #11181f; stroke: #00ffff; stroke-width: 1.5; rx: 8; }
+    .card-header-bg { fill: #0f1419; }
+    .card-header-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #00ffff; font-weight: bold; letter-spacing: 0.5px; }
+    .card-label { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #7fe7e0; font-weight: 500; }
+    .card-val { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #e6ffff; font-weight: 400; }
+    
+    .text-body { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #d8f5f3; }
+    .text-bold { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #ffffff; font-weight: bold; }
+    .text-teal { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #39c5bb; font-weight: bold; }
+    .text-pink { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #ff5fa2; font-weight: bold; }
+    .text-cyan { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #7fe7e0; font-weight: 500; }
+    .text-dim { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 12px; fill: #607382; }
+    .text-yellow { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #f9e2af; font-weight: 600; }
+    .text-green { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; fill: #a6e3a1; font-weight: 600; }
+
+    .tag-rect { fill: #161e26; stroke: #2d4150; stroke-width: 1; rx: 3; }
+    .tag-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; fill: #7fe7e0; font-weight: 600; }
+    .tag-rect-pink { fill: #241420; stroke: #6b264e; stroke-width: 1; rx: 3; }
+    .tag-text-pink { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; fill: #ff9ad5; font-weight: 600; }
+    .tag-rect-teal { fill: #112528; stroke: #23585b; stroke-width: 1; rx: 3; }
+    .tag-text-teal { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 11px; fill: #39c5bb; font-weight: 600; }
+
+    .cursor { fill: #39c5bb; }
+  </style>
+
+  <!-- Terminal Window Background -->
+  <rect x="5" y="5" width="910" height="2150" rx="12" class="terminal-bg" />
+
+  <!-- Title Bar -->
+  <path d="M 5,17 Q 5,5 17,5 L 903,5 Q 915,5 915,17 L 915,42 L 5,42 Z" class="title-bar" />
+  <line x1="5" y1="42" x2="915" y2="42" stroke="#1c242b" stroke-width="1.5" />
+
+  <!-- Window Control Buttons -->
+  <circle cx="28" cy="23.5" r="6" fill="#ff5f56" />
+  <circle cx="48" cy="23.5" r="6" fill="#ffbd2e" />
+  <circle cx="68" cy="23.5" r="6" fill="#27c93f" />
+
+  <!-- Window Tab -->
+  <path d="M 105,42 L 115,14 L 320,14 L 330,42 Z" class="tab-bg" />
+  <text x="135" y="32" class="tab-text">natex15@uplb: ~ (zsh)</text>
+
+  <!-- ==================== CONTENT AREA ==================== -->
+
+  <!-- Fastfetch Command -->
+  <text x="45" y="75">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">fastfetch</tspan>
+  </text>
+
+  <!-- Centered Fastfetch Card (Vector Box) -->
+  <!-- Total width = 920. Card width = 830. Left x = (920 - 830)/2 = 45 -->
+  <rect x="45" y="102" width="830" height="152" class="card-border" />
+  
+  <!-- Header Cutout & Centered Label -->
+  <rect x="330" y="93" width="260" height="18" class="card-header-bg" />
+  <text x="460" y="107" text-anchor="middle" class="card-header-text">NATEX15 // SYSTEM INFO</text>
+
+  <!-- Fastfetch Card Contents -->
+  <text x="75" y="134">
+    <tspan class="card-label">User        </tspan><tspan class="card-val">Nathaniel Escano (Natex15)</tspan>
+  </text>
+  <text x="75" y="158">
+    <tspan class="card-label">Education   </tspan><tspan class="card-val">BS Computer Science — 3rd Year @ UPLB</tspan>
+  </text>
+  <text x="75" y="182">
+    <tspan class="card-label">Honors      </tspan><tspan class="card-val">DOST Merit Scholar</tspan>
+  </text>
+  <text x="75" y="206">
+    <tspan class="card-label">Focus       </tspan><tspan class="card-val">Software Engineering &amp; Full-Stack Systems</tspan>
+  </text>
+  <text x="75" y="230">
+    <tspan class="card-label">Environment </tspan><tspan class="card-val">Linux Mint 22.3 x86_64 // Kitty Terminal // Zsh</tspan>
+  </text>
+
+  <!-- [01] WHOAMI -->
+  <text x="45" y="295">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">whoami</tspan>
+  </text>
+  <text x="45" y="325" class="text-body">I am a <tspan class="text-teal">3rd-year BS Computer Science student</tspan> at the <tspan class="text-bold">University of the Philippines Los Baños (UPLB)</tspan></text>
+  <text x="45" y="347" class="text-body">and a <tspan class="text-pink">DOST Merit Scholar</tspan>. My primary focus is <tspan class="text-bold">software engineering</tspan>—I already build full-stack</text>
+  <text x="45" y="369" class="text-body">applications and continue to deepen my engineering practices, explore AI/ML tooling, and strengthen</text>
+  <text x="45" y="391" class="text-body">my problem-solving and algorithmic foundations.</text>
+  <text x="45" y="419" class="text-dim">I enjoy turning theoretical computer science concepts into practical, reliable, and maintainable software.</text>
+
+  <!-- [02] INTERESTS -->
+  <text x="45" y="465">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">cat interests.cfg</tspan>
+  </text>
+  <text x="45" y="495"><tspan class="text-cyan">• Software Engineering &amp; Architecture:</tspan> <tspan class="text-body">Scalable system design, modular codebases, clean architecture</tspan></text>
+  <text x="45" y="519"><tspan class="text-cyan">• Full-Stack Development:</tspan> <tspan class="text-body">Modern web applications, client/server workflows, RESTful API engineering</tspan></text>
+  <text x="45" y="543"><tspan class="text-cyan">• Backend &amp; Database Systems:</tspan> <tspan class="text-body">Relational (PostgreSQL, MySQL) &amp; document (MongoDB) database design, SQL</tspan></text>
+  <text x="45" y="567"><tspan class="text-cyan">• Linux &amp; Systems:</tspan> <tspan class="text-body">Unix/Linux environments, shell scripting (Zsh/Bash), system tooling, open source</tspan></text>
+  <text x="45" y="591"><tspan class="text-cyan">• AI / Machine Learning &amp; Local Tooling:</tspan> <tspan class="text-body">Exploring local LLMs (Ollama, Qwen, Llama), applied data science</tspan></text>
+  <text x="45" y="615"><tspan class="text-cyan">• Algorithms &amp; Problem Solving:</tspan> <tspan class="text-body">Competitive programming, algorithmic analysis, data structure design</tspan></text>
+  <text x="45" y="639"><tspan class="text-cyan">• Game Development:</tspan> <tspan class="text-body">2D physics mechanics, interactive game loops, rapid prototype delivery</tspan></text>
+
+  <!-- [03] TECH STACK -->
+  <text x="45" y="685">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">tree ./tech-stack</tspan>
+  </text>
+  <text x="45" y="715"><tspan class="text-cyan">├── Languages .......... </tspan><tspan class="text-bold">C, C++, Python, Java, JavaScript, TypeScript, C#, R, SQL</tspan></text>
+  <text x="45" y="740"><tspan class="text-cyan">├── Frontend/Full-Stack . </tspan><tspan class="text-bold">Next.js (App Router), React, TypeScript, MERN Stack, PERN Stack</tspan></text>
+  <text x="45" y="765"><tspan class="text-cyan">├── Backend &amp; APIs ..... </tspan><tspan class="text-bold">Node.js, Express.js, REST APIs</tspan></text>
+  <text x="45" y="790"><tspan class="text-cyan">├── Databases .......... </tspan><tspan class="text-bold">PostgreSQL, MongoDB, MySQL, MariaDB, Supabase</tspan></text>
+  <text x="45" y="815"><tspan class="text-cyan">├── Systems &amp; Tools .... </tspan><tspan class="text-bold">Linux, Git, GitHub, Postman, Vercel, Figma, Photoshop</tspan></text>
+  <text x="45" y="840"><tspan class="text-cyan">├── Other Engines ...... </tspan><tspan class="text-bold">Godot, Unity, Flutter, JavaFX, R Shiny</tspan></text>
+  <text x="45" y="865"><tspan class="text-cyan">└── AI / ML (Explored) . </tspan><tspan class="text-pink">Ollama, Qwen, Llama, Python Data Science / ML</tspan></text>
+
+  <!-- [04] PROJECTS -->
+  <text x="45" y="915">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">git log --projects</tspan>
+  </text>
+
+  <!-- Project 1: YSES Online V2 -->
+  <text x="45" y="947" class="text-teal">[commit 01] YSES Online V2</text>
+  <rect x="265" y="935" width="130" height="18" class="tag-rect" />
+  <text x="273" y="948" class="tag-text">Next.js App Router</text>
+  <rect x="405" y="935" width="75" height="18" class="tag-rect" />
+  <text x="413" y="948" class="tag-text">MongoDB</text>
+  <rect x="490" y="935" width="165" height="18" class="tag-rect-teal" />
+  <text x="498" y="948" class="tag-text-teal">Full-Stack Collaborative</text>
+  <text x="55" y="971" class="text-body">• What it is: Official web platform for Young Software Engineers' Society (YSES), rebuilt from scratch.</text>
+  <text x="55" y="991" class="text-body">• Role: Contributed to collaborative redevelopment; expanded from frontend layouts into backend &amp; DB.</text>
+  <text x="55" y="1011" class="text-dim">• Highlights: App Router hybrid rendering, structured MongoDB schemas, reviewed legacy code transition.</text>
+
+  <!-- Project 2: UmaMASA -->
+  <text x="45" y="1045" class="text-teal">[commit 02] UmaMASA — Full-Stack E-Commerce System</text>
+  <rect x="475" y="1033" width="55" height="18" class="tag-rect" />
+  <text x="483" y="1046" class="tag-text">MERN</text>
+  <rect x="540" y="1033" width="85" height="18" class="tag-rect" />
+  <text x="548" y="1046" class="tag-text">TypeScript</text>
+  <rect x="635" y="1033" width="75" height="18" class="tag-rect-pink" />
+  <text x="643" y="1046" class="tag-text-pink">JWT Auth</text>
+  <text x="55" y="1069" class="text-body">• What it is: Full-scale e-commerce platform with customer storefront and administrative operations.</text>
+  <text x="55" y="1089" class="text-body">• Features: Browsing, real-time cart, checkout, order history, assistant chatbot, and admin dashboard.</text>
+  <text x="55" y="1109" class="text-dim">• Highlights: End-to-end typed contracts with TypeScript, role-based auth, inventory &amp; sales analytics.</text>
+
+  <!-- Project 3: Shared Space -->
+  <text x="45" y="1143" class="text-teal">[commit 03] Shared Space — Collaborative Art Platform</text>
+  <rect x="480" y="1131" width="55" height="18" class="tag-rect" />
+  <text x="488" y="1144" class="tag-text">MERN</text>
+  <rect x="545" y="1131" width="55" height="18" class="tag-rect" />
+  <text x="553" y="1144" class="tag-text">React</text>
+  <rect x="610" y="1131" width="75" height="18" class="tag-rect" />
+  <text x="618" y="1144" class="tag-text">REST APIs</text>
+  <text x="55" y="1167" class="text-body">• What it is: Community-focused web application for artists to publish, showcase, and interact with art.</text>
+  <text x="55" y="1187" class="text-body">• Contributions: Engineered client-side features including the ArtWall, Friend's Space, and Leaderboard.</text>
+  <text x="55" y="1207" class="text-dim">• Highlights: Dynamic media rendering, modular component architecture, responsive community feeds.</text>
+
+  <!-- Project 4: LTO IMS -->
+  <text x="45" y="1241" class="text-teal">[commit 04] LTO Information Management System</text>
+  <rect x="430" y="1229" width="85" height="18" class="tag-rect-pink" />
+  <text x="438" y="1242" class="tag-text-pink">PERN Stack</text>
+  <rect x="525" y="1229" width="85" height="18" class="tag-rect" />
+  <text x="533" y="1242" class="tag-text">PostgreSQL</text>
+  <rect x="620" y="1229" width="45" height="18" class="tag-rect" />
+  <text x="628" y="1242" class="tag-text">SQL</text>
+  <text x="55" y="1265" class="text-body">• What it is: Relational database system developed to manage and query vehicular administrative records.</text>
+  <text x="55" y="1285" class="text-body">• Contributions: Implemented full CRUD workflows, connected Express REST endpoints to PostgreSQL.</text>
+  <text x="55" y="1305" class="text-dim">• Highlights: Relational schema design, structured SQL queries, data validation, transactional integrity.</text>
+
+  <!-- Project 5: Ball1n -->
+  <text x="45" y="1339" class="text-teal">[commit 05] Ball1n — Physics Arcade Game</text>
+  <rect x="375" y="1327" width="60" height="18" class="tag-rect" />
+  <text x="383" y="1340" class="tag-text">Godot</text>
+  <rect x="445" y="1327" width="90" height="18" class="tag-rect" />
+  <text x="453" y="1340" class="tag-text">Game Jam+</text>
+  <rect x="545" y="1327" width="165" height="18" class="tag-rect-teal" />
+  <text x="553" y="1340" class="tag-text-teal">Game Jam+ PH Recognition</text>
+  <text x="55" y="1363" class="text-body">• What it is: Physics-driven arcade competition game built under hackathon constraints.</text>
+  <text x="55" y="1383" class="text-body">• Recognition: Earned recognition in Game Jam+ PH for gameplay design and custom 2D mechanics.</text>
+  <text x="55" y="1403" class="text-dim">• Highlights: Custom physics behaviors, responsive game controls, state handling for interactive loops.</text>
+
+  <!-- Project 6: City Pollution Reduction Solver -->
+  <text x="45" y="1437" class="text-teal">[commit 06] City Pollution Reduction Solver</text>
+  <rect x="400" y="1425" width="65" height="18" class="tag-rect" />
+  <text x="408" y="1438" class="tag-text">R Shiny</text>
+  <rect x="475" y="1425" width="165" height="18" class="tag-rect" />
+  <text x="483" y="1438" class="tag-text">Optimization &amp; Modeling</text>
+  <text x="55" y="1461" class="text-body">• What it is: Computational tool modeling mathematical optimization for environmental pollution reduction.</text>
+  <text x="55" y="1481" class="text-dim">• Highlights: Interactive modeling UI, algorithmic optimization routines, dynamic computational graphs.</text>
+
+  <!-- Project 7: Bebleus -->
+  <text x="45" y="1515" class="text-teal">[commit 07] Bebleus — Desktop Online Store</text>
+  <rect x="385" y="1503" width="60" height="18" class="tag-rect" />
+  <text x="393" y="1516" class="tag-text">Java</text>
+  <rect x="455" y="1503" width="65" height="18" class="tag-rect" />
+  <text x="463" y="1516" class="tag-text">JavaFX</text>
+  <text x="55" y="1539" class="text-body">• What it is: Desktop e-commerce application implementing product catalog browsing and cart state.</text>
+  <text x="55" y="1559" class="text-dim">• Highlights: JavaFX object-oriented graphical user interface, event-driven desktop state management.</text>
+
+  <!-- [05] JOURNEY -->
+  <text x="45" y="1605">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">cat journey.log</tspan>
+  </text>
+  <text x="45" y="1635" class="text-cyan">[01] Frontend Foundations ──▶ [02] Backend &amp; DBs ──▶ [03] Full-Stack Systems ──▶ [04] Intelligent Systems</text>
+  <text x="45" y="1657" class="text-dim">     UI, State &amp; Interactivity     Express, SQL, MongoDB      Next.js, MERN, PERN        Local LLMs, ML &amp; Games</text>
+  <text x="55" y="1685" class="text-body">• Started with responsive UI engineering and client state handling.</text>
+  <text x="55" y="1707" class="text-body">• Expanded into backend APIs, database design, and end-to-end full-stack architectures.</text>
+  <text x="55" y="1729" class="text-body">• Now exploring AI/ML tooling (Ollama, Qwen, Llama), data science modeling, and game engines.</text>
+
+  <!-- [06] GCI WORLD -->
+  <text x="45" y="1775">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">cat certifications/gci-world.md</tspan>
+  </text>
+  <text x="45" y="1805" class="text-yellow">GCI World April 2026 // Data Science &amp; Machine Learning Program</text>
+  <text x="45" y="1827" class="text-dim">Organized by Matsuo-Iwasawa Laboratory, Graduate School of Engineering, The University of Tokyo</text>
+  <text x="55" y="1853" class="text-body">• Exploratory Data Analysis (EDA) on large-scale datasets &amp; statistical pattern discovery</text>
+  <text x="55" y="1875" class="text-body">• Formulating quantitative business challenges, statistical/ML modeling, &amp; model evaluation</text>
+  <text x="55" y="1897" class="text-body">• Quantitative market analysis, executive-friendly visualization, &amp; quantified business proposals</text>
+
+  <!-- [07] FOCUS & GOALS -->
+  <text x="45" y="1945">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> <tspan class="prompt-cmd">cat focus.conf</tspan>
+  </text>
+  <text x="45" y="1975"><tspan class="text-cyan">current_focus   </tspan><tspan class="text-body">= </tspan><tspan class="text-bold">["Full-Stack Systems", "Software Engineering Fundamentals", "Local LLM Tooling"]</tspan></text>
+  <text x="45" y="1999"><tspan class="text-cyan">problem_solving </tspan><tspan class="text-body">= </tspan><tspan class="text-bold">["Competitive Programming", "Advanced Algorithms", "Data Structures"]</tspan></text>
+  <text x="45" y="2023"><tspan class="text-cyan">long_term_goal  </tspan><tspan class="text-body">= </tspan><tspan class="text-green">"Software Engineer building scalable, high-impact systems"</tspan></text>
+
+  <!-- [08] PROMPT & CURSOR -->
+  <text x="45" y="2070">
+    <tspan class="prompt-user">natex15</tspan><tspan class="prompt-at">@</tspan><tspan class="prompt-host">uplb</tspan> <tspan class="prompt-path">~</tspan> <tspan class="prompt-sym">❯</tspan> 
+  </text>
+  <rect x="198" y="2057" width="9" height="15" class="cursor" />
+</svg>
